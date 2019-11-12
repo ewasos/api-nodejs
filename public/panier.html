@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>BikeeShop - Mon panier</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- feuilles de styles -->
+    <link rel="stylesheet" href="css/colors.css">
+
+</head>
+
+<body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top sombra sin-border">
+      <div class="container-fluid amarillo">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img alt="Brand" src="img/logo2.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="index.html">Vélo hommes</a></li>
+            <li><a href="index.html">Vélo femmes</a></li>
+            <li><a href="index.html">Vélo enfants</a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Mon compte</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon panier <span class="badge" id="badgePanier"></span> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="listPanier" id="listInfo">
+                                
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li role="separator" class="divider"></li>
+                <!-- <li><a class="text-center" href="panier.html">Affichier mon panier</a></li> -->
+                <li>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      <a href="panier.html" class="btn btn-warning cuadrado btn-primary btn-lg btn-block">Affichier mon panier</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <div id="myTabs">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home">Mon panier</a></li>
+            <li role="presentation"><a href="#profile">Commande</a></li>
+            <li role="presentation"><a href="#messages">Confirmation</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header">
+                          <h3>Mon panier</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <table class="table" id="panier">
+                        <tr id="header-table">
+                            <th>Produit</th>
+                            <th>Prix</th>
+                            <th>Qté</th>
+                            <th>Sous-total</th>
+                            <th></th>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="panel panel-default cuadrado">
+                              <div class="panel-body negro text-white">
+                                <div class="form-group">
+                                  <label for="exampleInputEmail2">CODES DE REDUCTION</label>
+                                  <input type="email" class="form-control cuadrado" id="exampleInputEmail2" placeholder="5a07451a5fs9">
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="panel panel-default cuadrado">
+                              <div class="panel-body negro text-white">
+                                <dl class="dl-horizontal text-right">
+                                  <dt>SOUS-TOTAL</dt>
+                                  <dd class="sous-total">0,00  €</dd>
+                                  <dt>TVA NORMALE (20%)</dt>
+                                  <dd class="tva">0,00  €</dd>
+                                  <dt>DONT TAXE</dt>
+                                  <dd class="taxe">0,00  €</dd>
+                                  <hr>
+                                  <dt>MONTANT TTC</dt>
+                                  <dd><h4 class="ttc">0,00  €</h4></dd>
+                                  <hr>
+                                  <button type="button" class="btn btn-warning btn-lg btn-block cuadrado" id="valider">VALIDER MON PANIER</button>
+                                </dl>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header">
+                          <h3>Commande</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <form id="formConfirmation">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="inputNom">Nom</label>
+                                        <input type="text" class="form-control required" id="inputNom" placeholder="Dupont">
+                                        <span id="helpBlockNom" class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="inputPrenom">Prenom</label>
+                                        <input type="text" class="form-control required" id="inputPrenom" placeholder="Quentin">
+                                        <span id="helpBlockPrenom" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email address</label>
+                                        <input type="email" class="form-control required email" id="inputEmail" placeholder="Email">
+                                        <span id="helpBlockEmail" class="help-block"></span>
+                                    </div>
+                                    <button type="submit" class="btn btn-warning btn-block cuadrado">CONFIRMATION</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="inputAdresse">Address</label>
+                                        <textarea class="form-control required" rows="3" id="inputAdresse" placeholder="Résidence du Saulcy"></textarea>
+                                        <span id="helpBlockAdress" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-body negro text-white">
+                                <dl class="dl-horizontal text-right">
+                                    <dt>SOUS-TOTAL</dt>
+                                    <dd class="sous-total">0,0  €</dd>
+                                    <dt>TVA NORMALE (20%)</dt>
+                                    <dd class="tva">0,00  €</dd>
+                                    <dt>DONT TAXE</dt>
+                                    <dd class="taxe">0,00  €</dd>
+                                    <hr>
+                                    <dt>MONTANT TTC</dt>
+                                    <dd><h4 class="ttc">0,00  €</h4></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="messages">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="page-header">
+                          <h3>Confirmation</h3>
+                        </div>
+                        <p id="messageConfi" class="lead"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                </div>
+            </div>
+          </div>
+
+        </div>        
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script  src="https://code.jquery.com/jquery-3.2.1.js"  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="  crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/panier.js"></script>
+</body>
+</html>
